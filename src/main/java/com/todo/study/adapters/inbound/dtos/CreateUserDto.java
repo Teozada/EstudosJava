@@ -2,6 +2,7 @@ package com.todo.study.adapters.inbound.dtos;
 
 import lombok.Data;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -13,7 +14,7 @@ public class CreateUserDto {
     @NotBlank
     private String cargo;
     @NotBlank
-    @Pattern(regexp="/^[a-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$/i]")
+    @Email
     private String email;
     @NotBlank
     @Size(min = 8, max = 21)

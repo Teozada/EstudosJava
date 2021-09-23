@@ -55,7 +55,7 @@ public class JwtAuthenticateFilter extends UsernamePasswordAuthenticationFilter 
                     new UsernamePasswordAuthenticationToken(userModel.getEmail(),
                             userModel.getSenha(), new ArrayList<>()));
         } catch (IOException e) {
-            throw  new RuntimeException("Falha ao autenticar o usuario");
+            throw  new RuntimeException(e);
         }
     }
 }

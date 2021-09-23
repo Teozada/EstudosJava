@@ -21,6 +21,7 @@ public class UserServicesImpl implements UserService {
             userModel.setSenha(bCryptPasswordEncoder.encode(userModel.getSenha()));
             this.userRepository.create(userModel);
         } catch (Exception error) {
+            System.out.println(error);
             throw new Exception(error);
         }
     }
